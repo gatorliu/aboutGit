@@ -21,7 +21,7 @@ if [ -f $1 ]; then
    #   exit 1
    #fi
    cat $h > $pathall
-   cat $1 >> $pathall
+   sed 's#<#\&lt;# ; s#>#\&gt;#' $1 >> $pathall
    cat $f >> $pathall
    sed s/PATHTOFILEmd/$1/ $t > $path 
 else
