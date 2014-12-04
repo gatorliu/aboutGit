@@ -111,7 +111,7 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 
 一個 Branch & Merge 示意圖
 
-```本地！本地！```
+ ```本地！本地！```
 
 
  
@@ -132,13 +132,13 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 
 ### Case study
 	From progit 5.2
-<pre>
+ <pre>
 從最簡單的情況開始，一個私有專案，一起協作的有兩位開發者(John and Jessic)。這裡說私有，是指原始程式碼不公開，其他人無法訪問項目倉庫。而開發者則都具有推送資料到倉庫的許可權。
 
 這種情況下，可以用 Subversion 或其他集中式版本控制系統類似的工作流來協作。但仍然可以得到 Git 帶來的其他好處：離線提交，快速分支與合併等等，但工作流程還是差不多的。
-</pre>
+ </pre>
 
-```主要區別在於，合併操作發生在用戶端而非伺服器上。```
+ ```主要區別在於，合併操作發生在用戶端而非伺服器上。```
 
 
 #### Flow
@@ -158,15 +158,15 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 適用於```私有團隊間協作```與 ```公開的小型專案```
 ![](pics/workflow-b.png)
 
-```差異在於 Repository 的權限與```
+ ```差異在於 Repository 的權限與```
 
 
 ### Case Study 
 	From progit 5.2
-<pre>
+ <pre>
 假設 John 和 Jessica 一起負責開發某項特性 A，而同時 Jessica 和 Josie 一起負責開發另一項功能 B。公司使用典型的集成管理員式工作流，每個組都有一名管理員負責集成本組代碼，及更新專案主倉庫的 master 分支。所有開發都在代表小組的分支上進行。
-</pre>
-```！！似乎是，最適合我們的工作方式！！```
+ </pre>
+ ```！！似乎是，最適合我們的工作方式！！```
 
 
 #### Flow
@@ -174,10 +174,10 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 
 
 #### Status
-<pre> 
+ <pre> 
 	Jessic 在管理員完成集成工作後，主分支上便多出一個新的合併提交（5399e），
 	用 fetch 命令更新到本地後，提交歷史
-</pre>	
+ </pre>	
 ![](pics/pmt-state.png)
 
 
@@ -190,23 +190,23 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 
 
 ## Others
-<pre>
+ <pre>
 	再說一些關於git的事情 .... 
-</pre>
+ </pre>
 
 
 ### 儲藏 (Stashing)
-<pre>
+ <pre>
 經常有這樣的事情發生，當你正在進行專案中某一部分的工作，裡面的東西處於一個比較雜亂的狀態，而你想轉到其他分支上進行一些工作。問題是，你不想只為了待會要回到這個工作點，就把做到一半的工作進行提交。解決這個問題的辦法就是 git stash 命令。
 
 「儲藏」可以獲取你工作目錄的 dirty state——也就是你修改過的被追蹤檔和暫存的變更——並將它保存到一個未完成變更的堆疊(stack)中，隨時可以重新應用
-</pre>
+ </pre>
 
 
 ### 一點點技術細節
-<pre>
+ <pre>
 	Git與所有其它版本控制系統最重要的區別。 它完全顛覆傳統版本控制的作法。 這使用Git更像一個上層具備更強大工具的小型檔案系統，而不只是版本控制系統。
-</pre>
+ </pre>
 
 
 #### others VC: Deltas
