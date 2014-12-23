@@ -240,8 +240,11 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 	
 * 管理自己的档案，也可以用git
 	* 记得吗？ Git更像一个小型档案系统 （.git）
-	* git + markdown
-	* git + wiki 
+    ``` 
+     cp foo.txt foo.txt.20141130  # 已成往事
+    ```
+    * 我用 git + markdown / wiki 
+    * 有人 git 整個 /etc/ 或 logs
 
 
 
@@ -267,10 +270,15 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 	
 here X =
 	 
-* https://github.com/gatorliu/aboutGit.git - This Slide
-* https://github.com/progit/progit2.git    - ProGit
-* https://github.com/schacon/whygitisbetter.git - Why git is better then X
+* This Slide
+   * https://github.com/gatorliu/aboutGit.git
+* ProGit2
+   * https://github.com/progit/progit2.git
+* Why git is better then X
+   * https://github.com/schacon/whygitisbetter.git 
 
+
+### Demo or not !?
 
 
 # Question & Answer
