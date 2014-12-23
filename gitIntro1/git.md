@@ -244,7 +244,7 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
      cp foo.txt foo.txt.20141130  # 已成往事
     ```
     * 我用 git + markdown / wiki 
-    * 有人 git 整個 /etc/ 或 logs
+    * 有人 git 整个 /etc/ 或 logs
 
 
 
