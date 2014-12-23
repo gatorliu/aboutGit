@@ -11,6 +11,7 @@
 
 所以就直接说说 '分散式 Distributed' 
 
+![](pics\1.jpg)
 
 ###  先看看集中式 （Centralized）
 
