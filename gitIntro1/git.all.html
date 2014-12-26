@@ -20,7 +20,7 @@
 
                 <!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
                 <section data-markdown="" data-separator="^\n\n\n" data-vertical="^\n\n">
-# Git 簡介
+# Git 简介
 
 &gt; 分散式版本控制 
 
@@ -31,20 +31,21 @@
 
 ## 版本控制大家都知道了
 
-所以就直接說說 '分散式 Distributed' 
+所以就直接说说 '分散式 Distributed' 
 
 ![](pics/Centralized-Decentralized-And-Distributed-System.jpg)
 
 
+
 ###  先看看集中式 （Centralized）
 
-有一台中央團隊共用的Repository，每個團隊成員從Repository獲取檔案，編修後再放回。
+有一台中央团队共享的Repository，每个团队成员从Repository获取档案，编修后再放回。
 
 
-* 如果有別人也修改同一個檔案(稱作衝突)，進行手動編修解決。
+* 如果有别人也修改同一个档案(称作冲突)，进行手动编修解决。
 * VSC, SVN
-* Centralized VCS 的共同缺點是做什麼事都要跟伺服器連線，會比較慢。
-* 另外也有單點故障的風險(Single point of failure)。
+* Centralized VCS 的共同缺点是做什么事都要跟服务器连线，会比较慢。
+* 另外也有单点故障的风险(Single point of failure)。
 
 
 ### 
@@ -53,7 +54,7 @@
 
 ### Distributed
 
-分散式版本控制系統讓本地端也擁有完整的Repository，就沒有上述集中式的問題，即使沒網路，照常可以 commit 和看 history log，也不用擔心server備份。
+分散式版本控制系统让本地端也拥有完整的Repository，就没有上述集中式的问题，即使没网络，照常可以 commit 和看 history log，也不用担心server备份。
 
 * Git, Mercurial(Hg), Bazaara
 
@@ -62,53 +63,53 @@
 ![](pics/distributed.gif) ![](pics/distributed.png) 
 
 
-### 有缺點嗎？
+### 有缺点吗？
 
-* 若要說有什麼缺點，就是能力越大，功能就越複雜，一開始學習上會比較辛苦一點。
-* 每個人都有完整Repository，是優點還是缺點 ？？
+* 若要说有什么缺点，就是能力越大，功能就越复杂，一开始学习上会比较辛苦一点。
+* 每个人都有完整Repository，是优点还是缺点 ？？
 
 
-### 就功能來說
+### 就功能来说
 
 In fact, The centralized VCS is a subset of what a distributed model can do. 
 
 
 
-## 開始說Git吧！
+## 开始说Git吧！
 
-&gt; 從實際例子出發  
-&gt; 不(少)講操作與指令，重點放在管理面(概念) 
-&gt; 試圖解決目前版本控管的問題
+&gt; 从实际例子出发  
+&gt; 不(少)讲操作与指令，重点放在管理面(概念) 
+&gt; 试图解决目前版本控管的问题
 &gt; Demo (?) 
 
 * What is Git & Why Git?
 * 本地的分支
 * 集中式工作流
-* 集成管理員工作流
-* 司令官與副官工作流
+* 集成管理员工作流
+* 司令官与副官工作流
 * Others
-* 參考
+* 参考
 
 
 
 ## What is Git?
 
-* 	Git 最早是 Linus Torvalds 用以取代非開源的 BitKeeper 分散式版本控制系統，經快速的開發後，現已被全球眾多知名自由軟體專案採用，儼然是新生代的基礎建設之一。
+* 	Git 最早是 Linus Torvalds 用以取代非开源的 BitKeeper 分散式版本控制系统，经快速的开发后，现已被全球众多知名自由软件项目采用，俨然是新生代的基础建设之一。
 -- [Jserv](http://blog.linux.org.tw/~jserv/archives/002019.html)
 
 * http://git-scm.com/ --local-branching-on-the-cheap
 
 
-### 設計時的目標
+### 设计时的目标
 * 快速
-* 簡潔的設計
-* 完整支援非線性的開發（上千個同時進行的分支）
-* 完全的分散式系統
-* 能夠有效地處理像 Linux kernel 規模的專案（速度及資料大小）
+* 简洁的设计
+* 完整支援非线性的开发（上千个同时进行的分支）
+* 完全的分散式系统
+* 能够有效地处理像 Linux kernel 规模的项目（速度及资料大小）
 	* 15,000,000+ Lines
 	* 1300+ Developers 
 	
-	[資料來源 2012](http://royal.pingdom.com/2012/04/16/linux-kernel-development-numbers/)
+	[资料来源 2012](http://royal.pingdom.com/2012/04/16/linux-kernel-development-numbers/)
 
 
 ## Why Git?
@@ -118,12 +119,12 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 * github 
 	* open source developer
 	* GitCafe  
-* ............我只會git 
+* ............我只会git 
 
 
 
 ## ```本地```的```分支```!
-如果你想寫一個新功能，但是他可能要花你一週的時間。當寫了一半時，有一個Bug需要立刻處理.......
+如果你想写一个新功能，但是他可能要花你一周的时间。当写了一半时，有一个Bug需要立刻处理.......
 
 	git checkout -b ........
 
@@ -133,13 +134,13 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 
 ### ![](pics/git-branch1.png)
 
-一個 Branch & Merge 示意圖
+一个 Branch & Merge 示意图
 
 ```本地！本地！```
 
 
  
-### 遠端怎麼做?
+### 远端怎么做?
 ![](pics/git-fetch.png)
 
 * git pull.............
@@ -149,7 +150,7 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 
 
 ## 集中式工作流
-適用於```私有的小型團隊```
+适用于```私有的小型团队```
 
 ![](pics/workflow-a.png)
 
@@ -157,12 +158,12 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 ### Case study
 	From progit 5.2
 &lt;pre&gt;
-從最簡單的情況開始，一個私有專案，一起協作的有兩位開發者(John and Jessic)。這裡說私有，是指原始程式碼不公開，其他人無法訪問項目倉庫。而開發者則都具有推送資料到倉庫的許可權。
+从最简单的情况开始，一个私有项目，一起协作的有两位开发者(John and Jessic)。这里说私有，是指原始程序码不公开，其他人无法访问项目仓库。而开发者则都具有推送资料到仓库的权限。
 
-這種情況下，可以用 Subversion 或其他集中式版本控制系統類似的工作流來協作。但仍然可以得到 Git 帶來的其他好處：離線提交，快速分支與合併等等，但工作流程還是差不多的。
+这种情况下，可以用 Subversion 或其他集中式版本控制系统类似的工作流来协作。但仍然可以得到 Git 带来的其他好处：离线提交，快速分支与合并等等，但工作流程还是差不多的。
 &lt;/pre&gt;
 
-```主要區別在於，合併操作發生在用戶端而非伺服器上。```
+```主要区别在于，合并操作发生在用户端而非服务器上。```
 
 
 #### Flow
@@ -170,27 +171,27 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 
 
 #### Status 
-	合併 John 的更新後 Jessica 的提交歷史
+	合并 John 的更新后 Jessica 的提交历史
  		
 ![](pics/pst-state.png)
 
-	PS :Jessica 的本地倉庫歷史多出了 John 的兩次提交（738ee 和 72bbc）
+	PS :Jessica 的本地仓库历史多出了 John 的两次提交（738ee 和 72bbc）
 
 
 
-## 集成管理員工作流
-適用於```私有團隊間協作```與 ```公開的小型專案```
+## 集成管理员工作流
+适用于```私有团队间协作```与 ```公开的小型项目```
 ![](pics/workflow-b.png)
 
-```差異在於 Repository 的權限與```
+```差异在于 Repository 的权限与```
 
 
 ### Case Study 
 	From progit 5.2
 &lt;pre&gt;
-假設 John 和 Jessica 一起負責開發某項特性 A，而同時 Jessica 和 Josie 一起負責開發另一項功能 B。公司使用典型的集成管理員式工作流，每個組都有一名管理員負責集成本組代碼，及更新專案主倉庫的 master 分支。所有開發都在代表小組的分支上進行。
+假设 John 和 Jessica 一起负责开发某项特性 A，而同时 Jessica 和 Josie 一起负责开发另一项功能 B。公司使用典型的集成管理员式工作流，每个组都有一名管理员负责集成本组代码，及更新项目主仓库的 master 分支。所有开发都在代表小组的分支上进行。
 &lt;/pre&gt;
-```！！似乎是，最適合我們的工作方式！！```
+```！！似乎是，最适合我们的工作方式！！```
 
 
 #### Flow
@@ -199,15 +200,15 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 
 #### Status
 &lt;pre&gt; 
-	Jessic 在管理員完成集成工作後，主分支上便多出一個新的合併提交（5399e），
-	用 fetch 命令更新到本地後，提交歷史
+	Jessic 在管理员完成集成工作后，主分支上便多出一个新的合并提交（5399e），
+	用 fetch 命令更新到本地后，提交历史
 &lt;/pre&gt;	
 ![](pics/pmt-state.png)
 
 
 
-## 司令官與副官工作流
-適用於```公開的大型專案```
+## 司令官与副官工作流
+适用于```公开的大型项目```
 
 ![](pics/workflow-c.png)
 
@@ -215,21 +216,21 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 
 ## Others
 &lt;pre&gt;
-	再說一些關於git的事情 .... 
+	再说一些关于git的事情 .... 
 &lt;/pre&gt;
 
 
-### 儲藏 (Stashing)
+### 储藏 (Stashing)
 &lt;pre&gt;
-經常有這樣的事情發生，當你正在進行專案中某一部分的工作，裡面的東西處於一個比較雜亂的狀態，而你想轉到其他分支上進行一些工作。問題是，你不想只為了待會要回到這個工作點，就把做到一半的工作進行提交。解決這個問題的辦法就是 git stash 命令。
+经常有这样的事情发生，当你正在进行项目中某一部分的工作，里面的东西处于一个比较杂乱的状态，而你想转到其他分支上进行一些工作。问题是，你不想只为了待会要回到这个工作点，就把做到一半的工作进行提交。解决这个问题的办法就是 git stash 命令。
 
-「儲藏」可以獲取你工作目錄的 dirty state——也就是你修改過的被追蹤檔和暫存的變更——並將它保存到一個未完成變更的堆疊(stack)中，隨時可以重新應用
+「储藏」可以获取你工作目录的 dirty state——也就是你修改过的被追踪档和暂存的变更——并将它保存到一个未完成变更的堆栈(stack)中，随时可以重新应用
 &lt;/pre&gt;
 
 
-### 一點點技術細節
+### 一点点技术细节
 &lt;pre&gt;
-	Git與所有其它版本控制系統最重要的區別。 它完全顛覆傳統版本控制的作法。 這使用Git更像一個上層具備更強大工具的小型檔案系統，而不只是版本控制系統。
+	Git与所有其它版本控制系统最重要的区别。 它完全颠覆传统版本控制的作法。 这使用Git更像一个上层具备更强大工具的小型档案系统，而不只是版本控制系统。
 &lt;/pre&gt;
 
 
@@ -244,40 +245,40 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 ### Git and X
 
 * X == SVN
-	&lt;pre&gt;progit 8.2 Git 與其他系統 - 遷移到 Git</pre>
+	&lt;pre&gt;progit 8.2 Git 与其他系统 - 迁移到 Git</pre>
 * X == Windows
-	&lt;pre&gt;沒問題，還附贈 git console (with bash)</pre>
+	&lt;pre&gt;没问题，还附赠 git console (with bash)</pre>
 	* download: http://git-scm.com/download/win
 * X == Eclipse
 	&lt;pre&gt;EGit(http://eclipse.org/egit)</pre>
 	* Eclipse using Git: http://git.eclipse.org/c/
 
 
-### 如果公司決定不用 Git了 
+### 如果公司决定不用 Git了 
 
-	你還是可以 學/使用 Git，因為：
+	你还是可以 学/使用 Git，因为：
 
 * Github.com
 	* https://github.com/jquery/jquery
 	* https://github.com/mybatis/mybatis-3
 	* Ruby (ROR)................
 	
-* 管理自己的檔案，也可以用git
-	* 記得嗎？ Git更像一個小型檔案系統 （.git）
-	``` 
-	 cp foo.txt foo.txt.20141130  # 已成往事
-	```
-	* 我用 git + markdown / wiki 
-	* 有人 git 整個 /etc/ 或 logs
+* 管理自己的档案，也可以用git
+	* 记得吗？ Git更像一个小型档案系统 （.git）
+        ``` 
+         cp foo.txt foo.txt.20141130  # 已成往事
+        ```
+        * 我用 git + markdown / wiki 
+        * 有人 git 整个 /etc/ 或 logs
 
 
 
-## 參考
+## 参考
 
 
 ### A successful Git branching model
 * [原文 http://nvie.com/posts/a-successful-git-branching-model/](http://nvie.com/posts/a-successful-git-branching-model/)
-* [翻譯 http://www.juvenxu.com/2010/11/28/a-successful-git-branching-model/](http://www.juvenxu.com/2010/11/28/a-successful-git-branching-model/)
+* [翻译 http://www.juvenxu.com/2010/11/28/a-successful-git-branching-model/](http://www.juvenxu.com/2010/11/28/a-successful-git-branching-model/)
 * [tool - git-flow](https://github.com/nvie/gitflow)
 
 
@@ -302,8 +303,8 @@ here X =
    * https://github.com/schacon/whygitisbetter.git 
 
 
-### Demo or not !?
 
+### Demo or not !?
 
 
 # Question & Answer
