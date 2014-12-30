@@ -198,11 +198,74 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 
 
 #### Status
-&lt;pre&gt; 
 	Jessic 在管理員完成集成工作後，主分支上便多出一個新的合併提交（5399e），
 	用 fetch 命令更新到本地後，提交歷史
 &lt;/pre&gt;	
 ![](pics/pmt-state.png)
+
+
+### 關於合併與衝突
+   有些時候`人工`的介入還是不可避免的。但是git提供了些工具：
+
+* merge
+* diff + apply 
+
+
+### Merge
+   ref: progit 3.2
+   ```
+   git checkout featureBee
+   git merge featureA
+   # ............ run and debug here.............
+   git commit -am ""
+   ```
+   more complicated
+   ```
+   git checkout -b featureBee_addA
+   git merge featureA
+   # ............ run and debug .............
+   git stash
+   git checkout featureBee
+   git stash pop
+   git commit -am ""
+   ```
+
+
+### Merge Conflicts
+
+   ```
+   $ git merge iss53
+   Auto-merging index.html
+   CONFLICT (content): Merge conflict in index.html
+   Automatic merge failed; fix conflicts and then commit the result.
+   ```
+
+   ```
+   &lt;<<<<<< HEAD
+   &lt;div id="footer"&gt;contact : email.support@github.com</div>
+   =======
+   &lt;div id="footer"&gt;
+     please contact us at support@github.com
+     &lt;/div&gt;
+     &gt;>>>>>> iss53
+   ```
+
+
+### diff + apply
+* git diff -&gt;  git apply 
+* git format-patch -&gt; git am (apply mail)
+* Unix Like 系統上常用的工具 diff and patch  。
+ (git bash 一個提供Linux 工具的 Windows console (grep, sed, awk .........))
+   
+   Jessica
+   ```
+   git diff maser &gt; featureA.patch
+   ```
+   Josie
+   ```
+   git checkout featureBee
+   git apply patch
+   ```
 
 
 
