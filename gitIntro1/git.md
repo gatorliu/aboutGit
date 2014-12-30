@@ -184,8 +184,8 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 ![](pics/pmt-state.png)
  
  
-### 關於合併與衝突
-   有些時候`人工`的介入還是不可避免的。但是git提供了些工具：
+### 关于合并与冲突
+   有些时候`人工`的介入还是不可避免的。但是git提供了些工具：
 
 * merge
 * diff + apply 
@@ -234,12 +234,12 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 ### diff + apply
 * git diff ->  git apply 
 * git format-patch -> git am (apply mail)
-* Unix Like 系統上常用的工具 diff and patch  。
- (git bash 一個提供Linux 工具的 Windows console (grep, sed, awk .........))
+* Unix Like 系统上常用的工具 diff and patch  。
+ (git bash 一个提供Linux 工具的 Windows console (grep, sed, awk .........))
    
    Jessica
    ```
-   git diff maser > featureA.patch
+   git diff master > featureA.patch
    ```
    Josie
    ```
