@@ -237,7 +237,7 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
    
    Jessica
    ```
-   git diff maser > featureA.patch
+   git diff master > featureA.patch
    ```
    Josie
    ```
