@@ -182,8 +182,8 @@ In fact, The centralized VCS is a subset of what a distributed model can do.
 	用 fetch 命令更新到本地后，提交历史
 </pre>	
 ![](pics/pmt-state.png)
- 
- 
+
+
 ### 關於合併與衝突
    有些時候`人工`的介入還是不可避免的。但是git提供了些工具：
 
